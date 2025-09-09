@@ -79,7 +79,7 @@ struct node *del_begin(struct node *head)
     if (head != NULL)
         head->prev = NULL;
     else
-        tail = NULL; // list became empty
+        tail = NULL; 
 
     free(temp);
     return head;
@@ -139,7 +139,7 @@ struct node *del_middle(struct node *head)
     if (temp->next != NULL)
         temp->next->prev = temp->prev;
     else
-        tail = temp->prev; // if last node
+        tail = temp->prev; 
 
     if (temp->prev != NULL)
         temp->prev->next = temp->next;
@@ -158,3 +158,4 @@ void display()
     }
     printf("NULL\n");
 }
+
