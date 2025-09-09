@@ -67,7 +67,7 @@ struct node *insert_begin(struct node *head)
     if (head != NULL)
         head->prev = newnode;
     else
-        tail = newnode; // if list was empty
+        tail = newnode; 
 
     head = newnode;
     return head;
@@ -85,7 +85,7 @@ struct node *insert_end(struct node *head)
     if (tail != NULL)
         tail->next = newnode;
     else
-        head = newnode; // if list was empty
+        head = newnode; 
 
     tail = newnode;
     return head;
@@ -113,14 +113,14 @@ struct node *insert_middle(struct node *head)
         i++;
     }
 
-    // Insert in between
+ 
     newnode->next = temp->next;
     newnode->prev = temp;
 
     if (temp->next != NULL)
         temp->next->prev = newnode;
     else
-        tail = newnode; // if inserted at end
+        tail = newnode; 
 
     temp->next = newnode;
 
@@ -138,3 +138,4 @@ void display()
     }
     printf("NULL\n");
 }
+
