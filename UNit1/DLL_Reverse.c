@@ -70,24 +70,25 @@ void reverse()
 {
     struct node *curr = head, *temp = NULL;
 
-    // Swap next and prev for each node
+    
     while (curr != NULL)
     {
         temp = curr->prev;
         curr->prev = curr->next;
         curr->next = temp;
-        curr = curr->prev; // move left since swapped
+        curr = curr->prev;
     }
 
-    // After loop, temp points to old prev of NULL -> update head & tail
+    
     if (temp != NULL)
     {
         head = temp->prev;
     }
 
-    // Update tail also
+   
     struct node *t = head;
     while (t != NULL && t->next != NULL)
         t = t->next;
     tail = t;
 }
+
